@@ -1,10 +1,11 @@
 Theme: Game World Kit
 
-Part A — Factory Method: spawning individual Enemy entities (Goblin, Skeleton, Slime).
-Part B — Abstract Factory: generating a unified World family — Enemy + Terrain + Soundtrack — for Forest, Ice, and Desert biomes.
+Part A — Factory Method: spawning a single Enemy (Goblin, Skeleton, Slime).
+Part B — Abstract Factory: building a consistent World family — Enemy + Terrain + Soundtrack — for Forest, Ice, and Desert worlds.
 
 Repository structure
 
+```text
 assignment2-design-patterns/
 ├── src/
 │   ├── factorymethod/      (Part A)
@@ -16,7 +17,7 @@ assignment2-design-patterns/
 │   │   ├── GoblinSpawner.java         ConcreteCreator
 │   │   ├── SkeletonSpawner.java       ConcreteCreator
 │   │   ├── SlimeSpawner.java          ConcreteCreator
-│   │   └── FactoryMethodDemo.java     Client / Entry point
+│   │   └── FactoryMethodDemo.java     Client
 │   └── abstractfactory/    (Part B)
 │       ├── Enemy.java / Terrain.java / Soundtrack.java     Abstract products
 │       ├── WorldFactory.java                               AbstractFactory
@@ -29,6 +30,7 @@ assignment2-design-patterns/
 
 Build & run
 
+Bash
 find src -name "*.java" > sources.txt
 javac -d out @sources.txt
 
